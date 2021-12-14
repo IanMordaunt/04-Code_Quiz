@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <a href="./highscores.html" id="highscore-btn" class="button"
+      >-Highscores-</a
+    >
+
+    <div class="scores">Time: <span id="time">0</span></div>
+
+    <div id="container1">
+      <div id="home" class="flex-column flex-center">
+        <h1>Code Quiz Challenge</h1>
+        <button class="button" id="startGame">-Start Game-</button>
+      </div>
+
+      <div id="questionContainer" class="hide">
+        <h1 id="questionTitle">test</h1>
+        <div id="questionOptions"></div>
+        <h2 id="messageResponce"></h2>
+      </div>
+
+      
+
+      <div id="endContainer" class="flex-center flex-column hide">
+        <h1 id="finalScore">0</h1>
+        <form class="end-form-container">
+          <h2 id="end-text">Enter you initials and click save!</h2>
+          <input
+            type="text"
+            name="name"
+            id="username"
+            placeholder="Enter your initials"
+          />
+          <button class="btn" id="saveScoreBtn" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
