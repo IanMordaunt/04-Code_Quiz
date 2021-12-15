@@ -1,0 +1,16 @@
+
+
+#highScoresList {
+    list-style: none;
+}
+
+#highScores .btn {
+    font-size: 30px;
+    border-style: solid;
+    border-color: dimgray;
+    margin-bottom: 10px;
+    color: teal;
+    font-weight: 700;
+    padding: 5px;
+
+}
