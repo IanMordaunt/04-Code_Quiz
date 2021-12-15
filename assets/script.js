@@ -21,24 +21,24 @@ let score = 100
 
 let questions = [
   {
-    question: "What is 2 + 2?",
-    choices: ["2", "4", "12", "17"],
-    answer: "2",
+    question: "What does CSS stand for?",
+    choices: ["Computer Solid State", "Cascading Styling Sheet", "Coding Styling Syntex", "Collected System Storage"],
+    answer: "Cascading Styling Sheet",
   },
   {
-    question: 'What is 2 + 3?',
-    choices: ["2","4", "12", "17"],
-    answer: "2",
+    question: 'What special symbols do you use to indicate an Array?',
+    choices: ["**","()", "{}", "[]"],
+    answer: "[]",
   },
   {
-    question: 'What is 2 + 4?',
-    choices: ["2","4", "12", "17"],
-    answer: "2",
+    question: 'An "id" class in JavaScript is represented in what special character in CSS ?',
+    choices: [".","=", "#", "%"],
+    answer: "#",
   },
   {
-    question: 'What is 2 + 5?',
-    choices: ["2","4", "12", "17"],
-    answer: "2",
+    question: 'In JavaScript how do you represent strict equality?',
+    choices: ["=","==", "===", "===="],
+    answer: "===",
   },
   {
     question: 'What is 2 + 6?',
@@ -123,6 +123,7 @@ function checkAnswer(){
 }
 
 
+
 function displayMessage(string) {
     messageResponce.textContent = string;
     setTimeout(function () {
@@ -138,12 +139,12 @@ function over() {
 }
 
     // Final Score
-incrementScore = num => {
+function incrementScore(num) {
     score +=num
     finalScore.innerText = score
     
 }
-function saveScores(event) {
+function saveScore(event) {
     event.preventDefault()
 
     const score = {
@@ -152,7 +153,18 @@ function saveScores(event) {
     }
 
     highScore.push(score)
+
+    highScore.sort((a,b) => {
+      return b.score - a.score
+    })
+
+    highScore.splice(5)
+
+    localStorage.setItem('score', JSON.stringify(score))
+    windowl.location.assign('/')
 }
+
+
 
 // function TimesUp() {
 //     if (timeLeft <= 0) {
