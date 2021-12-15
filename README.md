@@ -20,7 +20,7 @@ This homework assignment presented an opportunity to become more familiar with t
 
 Working to implament funtions that are effieciant and effective. 
 
-
+Practice with "Setting and Getting" items from the local storage.
 
 
 
