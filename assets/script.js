@@ -16,6 +16,9 @@ var timeinterval;
 let questionCounter = 0;
 let score = 100
 
+let highScore = JSON.parse(localStorage.getItem('finalScore')) || []
+
+finalScore.innerText = finalScore
 
 //questions
 
@@ -41,9 +44,9 @@ let questions = [
     answer: "===",
   },
   {
-    question: 'What is 2 + 6?',
-    choices: ["2","4", "12", "17"],
-    answer: "2",
+    question: 'What is a type of boolean in JS?',
+    choices: ["22","hello", "true", "$"],
+    answer: "true",
   },
 ];
 
@@ -81,6 +84,8 @@ function stopTime() {
 
 function getNewQuestion() {
   var currentQuestion = questions[questionCounter];
+
+  localStorage.setItem('finalScore', score)
 
   //display questionTitle on the page
   questionTitle.textContent = currentQuestion.question;
@@ -142,8 +147,9 @@ function over() {
 function incrementScore(num) {
     score +=num
     finalScore.innerText = score
-    
+
 }
+
 function saveScore(event) {
     event.preventDefault()
 
@@ -154,16 +160,16 @@ function saveScore(event) {
 
     highScore.push(score)
 
-    highScore.sort((a,b) => {
+   highScore.sort((a,b) => {
       return b.score - a.score
     })
 
     highScore.splice(5)
 
-    localStorage.setItem('score', JSON.stringify(score))
+    localStorage.setItem('highScore', JSON.stringify(finalScore))
     windowl.location.assign('/')
 }
-
+console.log(finalScore);
 
 
 // function TimesUp() {
@@ -183,7 +189,7 @@ function saveScore(event) {
 // finalScore.innerText = mostRecentScore
 
 
-localStorage.setItem('finalScore', JSON.stringify(finalScore));
+// localStorage.setItem('finalScore', JSON.stringify(finalScore));
     //listener a the bottom of the page to start the game on buttom click
 
 startGameEl.onclick = start;
