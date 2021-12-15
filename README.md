@@ -29,3 +29,6 @@ Practice with "Setting and Getting" items from the local storage.
 https://ianmordaunt.github.io/04-Code_Quiz/
 
 ![Alt text](https://github.com/IanMordaunt/04-Code_Quiz/blob/main/assets/Code%20Quiz.png)
+![Alt text](https://github.com/IanMordaunt/04-Code_Quiz/blob/main/assets/Code%20Quiz2.png)
+![Alt text](https://github.com/IanMordaunt/04-Code_Quiz/blob/main/assets/Code%20Quiz3.png)
+![Alt text](https://github.com/IanMordaunt/04-Code_Quiz/blob/main/assets/High%20Scores.png)
