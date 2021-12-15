@@ -16,9 +16,6 @@ var timeinterval;
 let questionCounter = 0;
 let score = 100
 
-let highScore = JSON.parse(localStorage.getItem('finalScore')) || []
-
-finalScore.innerText = finalScore
 
 //questions
 
@@ -166,9 +163,9 @@ function saveScore(event) {
 
     highScore.splice(5)
 
-    localStorage.setItem('highScore', JSON.stringify(finalScore))
+    localStorage.setItem('score', JSON.stringify(highScores));
     windowl.location.assign('/')
-}
+  }
 console.log(finalScore);
 
 
@@ -182,7 +179,7 @@ console.log(finalScore);
 
     //  Saving Highscore
 
-// const highScore = JSON.parse(localStorage.getItem('highScores')) || []
+
 
 // const MAX_HIGH_SCORE = 5
 
